@@ -1,0 +1,105 @@
+@import "~@fluentui/react/dist/sass/References.scss";
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: "Segoe UI", sans-serif;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+      background: #0078d4; // SharePoint blue
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #e5e5e5;
+      text-align:center;
+    }
+
+    tr:hover {
+      background: #f3f9ff;
+    }
+  }
+
+  // mobile responsive
+  @media (max-width: 768px) {
+    .responsive-table {
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #eee;
+        text-align: center;
+      }
+
+      td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+
+        &::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 10px;
+          font-weight: 600;
+          color: #333;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.callApi {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(
+      --link
+    ); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(
+        --linkHovered
+      ); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
