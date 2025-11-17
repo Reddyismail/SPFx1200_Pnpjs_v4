@@ -9,10 +9,28 @@
           "manifest": "./src/webparts/callApi/CallApiWebPart.manifest.json"
         }
       ]
+    },
+    "teams-tab-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/teamsTab/TeamsTabWebPart.js",
+          "manifest": "./src/webparts/teamsTab/TeamsTabWebPart.manifest.json"
+        }
+      ]
+    },
+    "feed-back-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/feedBack/FeedBackWebPart.js",
+          "manifest": "./src/webparts/feedBack/FeedBackWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "CallApiWebPartStrings": "lib/webparts/callApi/loc/{locale}.js"
+    "CallApiWebPartStrings": "lib/webparts/callApi/loc/{locale}.js",
+    "TeamsTabWebPartStrings": "lib/webparts/teamsTab/loc/{locale}.js",
+    "FeedBackWebPartStrings": "lib/webparts/feedBack/loc/{locale}.js"
   }
 }
