@@ -18,21 +18,21 @@ export default class CallApi extends React.Component<ICallApiProps, IState> {
     super(props);
     this.state = { items: [], Serach: [] };
   }
-  public async componentDidMount() {
+  public async componentDidMount(): Promise<void> {
     await this.loadItems();
     await this.loadSerach();
   }
-  private async loadItems() {
+  private async loadItems(): Promise<void> {
     // Get all items (default returns 100 items max)
-    const items = await this.props.sp.web.lists
+    const item = await this.props.sp.web.lists
       .getByTitle("CustomerData_3k") // your SharePoint list name
       .items.select("ID", "Title", "field_1", "field_2", "field_3")
       .top(100)(); // execute query
 
-    console.log("Items loaded:", items);
-    this.setState({ items }); // store in React state
+    console.log("Items loaded:", item);
+    this.setState({ items: item }); // store in React state
   }
-  private async loadSerach() {
+  private async loadSerach(): Promise<void> {
     // Get all items (default returns 100 items max)
     const ite = await this.props.sp.search("test");
     console.log("Items loaded:", ite);

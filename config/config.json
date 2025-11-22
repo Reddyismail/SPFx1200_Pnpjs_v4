@@ -25,12 +25,21 @@
           "manifest": "./src/webparts/feedBack/FeedBackWebPart.manifest.json"
         }
       ]
+    },
+    "permission-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/permission/PermissionWebPart.js",
+          "manifest": "./src/webparts/permission/PermissionWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "CallApiWebPartStrings": "lib/webparts/callApi/loc/{locale}.js",
     "TeamsTabWebPartStrings": "lib/webparts/teamsTab/loc/{locale}.js",
-    "FeedBackWebPartStrings": "lib/webparts/feedBack/loc/{locale}.js"
+    "FeedBackWebPartStrings": "lib/webparts/feedBack/loc/{locale}.js",
+    "PermissionWebPartStrings": "lib/webparts/permission/loc/{locale}.js"
   }
 }
